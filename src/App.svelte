@@ -3,12 +3,13 @@
 	import dayjs from "dayjs";
 	import { onMount, onDestroy } from "svelte";
 
-	import DateSelector from "./components/DateSelector.svelte";
 	import TimeDisplay from "./components/TimeDisplay.svelte";
+	import GitHubCorner from "./components/GitHubCorner.svelte";
+	import DateSelector from "./components/DateSelector.svelte";
 	import SettingsPanel from "./components/SettingsPanel.svelte";
 	import SaveLinkButton from "./components/SaveButton.svelte";
-	import { calculateRemaining } from "./utilities/time-calculation";
 	import { eventsByRegion } from "./utilities/historical-events";
+	import { calculateRemaining } from "./utilities/time-calculation";
 
 	// Initialisation des variables.
 	let startDate = $state( "" );
@@ -97,7 +98,11 @@
 	} );
 </script>
 
+<!-- Conteneur général de la page -->
 <main class="p-8 max-w-xl mx-auto text-white space-y-6">
+	<!-- Logo GitHub -->
+	<GitHubCorner />
+
 	<!-- Titre de la page -->
 	<h1 class="text-2xl font-bold text-center">TimeLoop ⏳</h1>
 
