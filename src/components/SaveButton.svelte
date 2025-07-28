@@ -39,8 +39,8 @@
 </script>
 
 <button
-	class="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-white text-sm"
+	class="mt-8 mx-auto block px-4 py-2 cursor-pointer bg-blue-600 hover:bg-blue-700 rounded text-white text-sm"
 	onclick={saveToURL}
 >
-	Save current countdown
+	🔗 Save current countdown
 </button>
