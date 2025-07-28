@@ -3,6 +3,7 @@
 	import type { EventProperties } from "../interfaces/EventProperties";
 
 	// Initialisation des variables.
+	let selectedDate = $state( "" );
 	let {
 		label = $bindable( "" ),
 		date = $bindable( "" ),
@@ -32,8 +33,15 @@
 		<!-- Bouton pour définir la date actuelle -->
 		<button
 			type="button"
-			class="text-sm text-blue-400 hover:underline"
-			onclick={onNow}>Now</button
+			class="text-sm text-blue-400 cursor-pointer hover:underline"
+			onclick={() =>
+			{
+				// Réinitialisation de la date historique
+				//  sélectionnée si on veut la date actuelle.
+				selectedDate = "";
+
+				onNow();
+			}}>Now</button
 		>
 	</div>
 
@@ -41,7 +49,13 @@
 	<input
 		type="datetime-local"
 		class="p-2 border border-gray-600 rounded-md"
-		oninput={( event ) => onChange( event.currentTarget.value )}
+		oninput={( event ) =>
+		{
+			// Réinitialisation de la date historique
+			//  sélectionnée si on saisit une nouvelle date.
+			selectedDate = "";
+			onChange( event.currentTarget.value );
+		}}
 		bind:value={date}
 	/>
 
@@ -49,8 +63,9 @@
 	<select
 		class="mt-2 p-2 bg-zinc-950 rounded-md border border-gray-600 text-gray-300"
 		onchange={( event ) => onChange( event.currentTarget.value )}
+		bind:value={selectedDate}
 	>
-		<option value="" selected disabled>Or select historic event</option>
+		<option value="" selected disabled>Or select a historical event</option>
 
 		{#each Object.entries( events ) as [ region, items ] ( region )}
 			<optgroup label={region}>
