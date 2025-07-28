@@ -42,7 +42,7 @@
 
 		<!-- Affichage des unités de temps -->
 		<div
-			class="flex justify-center items-baseline space-x-6 text-5xl font-mono select-none"
+			class="flex justify-center max-sm:flex-col max-sm:items-center space-x-6 text-5xl font-mono select-none"
 		>
 			{#if showCenturies}
 				<TimeUnit label="centuries" value={remaining.centuries} />
