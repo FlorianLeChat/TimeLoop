@@ -3,7 +3,7 @@ import type { EventProperties } from "../interfaces/EventProperties";
 //
 // Liste des événements historiques organisés par région.
 //
-export const eventsByRegion: EventProperties[] = {
+export const eventsByRegion: Record<string, EventProperties[]> = {
 	"Europe & General": [
 		{ label: "Moon landing (1969-07-20)", date: "1969-07-20T20:17" },
 		{
