@@ -143,7 +143,7 @@
 	</div>
 
 	<!-- Affichage du compte à rebours -->
-	{#if startDate}
+	{#if startDate && endDate}
 		<TimeDisplay
 			{remaining}
 			{startIsNow}
