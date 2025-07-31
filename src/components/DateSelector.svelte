@@ -14,20 +14,20 @@
 			// Fonction par défaut pour gérer le changement de date.
 			console.log( "Date changed to:", value );
 		} ),
-		events = $bindable( [] )
+		events = $bindable( {} )
 	}: {
 		label: string;
 		date: string;
 		isNow: boolean;
 		onNow: () => void;
 		onChange: ( value: string ) => void;
-		events: EventProperties[];
+		events: Record<string, EventProperties[]>;
 	} = $props();
 </script>
 
 <div class="flex flex-col gap-2">
 	<div class="flex items-center justify-between">
-		<!-- Affichage du label pour la date -->
+		<!-- Affichage du libellé pour la date -->
 		<span>{label}</span>
 
 		<!-- Bouton pour définir la date actuelle -->
@@ -75,4 +75,23 @@
 			</optgroup>
 		{/each}
 	</select>
+
+	<!-- Affichage de la date sélectionnée -->
+	{#if selectedDate}
+		{@const regionData = Object.keys( events ).find( ( region ) =>
+			events[ region ].some( ( item ) => item.date === selectedDate )
+		)}
+		{@const eventData = events[ regionData ?? "" ]?.find(
+			( item ) => item.date === selectedDate
+		)}
+
+		<a
+			rel="noopener noreferrer"
+			href={eventData?.link}
+			class="text-sm inline-block w-[fit-content] break-all text-gray-400 underline underline-offset-2 decoration-dotted hover:text-blue-400"
+			target="_blank"
+		>
+			{eventData?.link}</a
+		>
+	{/if}
 </div>
