@@ -71,4 +71,4 @@ This project was created with [Svelte](https://svelte.dev/) 🚀, is based on th
 > [!CAUTION]
 > The Docker image **cannot** and **was not designed** to run in a production environment. This project generates static files that must be served with a pre-configured web server adhering to security and optimization best practices. ⚠️
 
-![image](https://github.com/user-attachments/assets/3802fd2b-8cc0-470c-87b6-bef0daeb49d6)
+![image](https://github.com/user-attachments/assets/3ad626e3-7e3e-4d3d-b5f1-5592f20f00dd)
