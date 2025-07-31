@@ -99,7 +99,7 @@
 </script>
 
 <!-- Conteneur général de la page -->
-<main class="p-8 max-w-xl mx-auto text-white space-y-6">
+<main class="p-8 scheme-dark max-w-xl mx-auto text-white space-y-6">
 	<!-- Logo GitHub -->
 	<GitHubCorner />
 
