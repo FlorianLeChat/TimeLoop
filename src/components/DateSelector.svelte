@@ -67,13 +67,20 @@
 		bind:value={date}
 	/>
 
+	<!-- Séparateur avec le sélecteur d'événements historiques -->
+	<div class="flex items-center justify-center text-gray-400 text-sm">
+		<hr class="flex-grow border-t-1 border-dotted border-gray-700" />
+		<span class="mx-2 whitespace-nowrap">Or</span>
+		<hr class="flex-grow border-t-1 border-dotted border-gray-700" />
+	</div>
+
 	<!-- Sélecteur pour les événements historiques -->
 	<select
-		class="mt-2 p-2 bg-zinc-950 rounded-md border border-gray-600 text-gray-300"
+		class="p-2 bg-zinc-950 rounded-md border border-gray-600 text-gray-300"
 		onchange={( event ) => onChange( event.currentTarget.value )}
 		bind:value={selectedDate}
 	>
-		<option value="" selected disabled>Or select a historical event</option>
+		<option value="" selected disabled>Select a historical event</option>
 
 		{#each Object.entries( events ) as [ region, items ] ( region )}
 			<optgroup label={region}>
