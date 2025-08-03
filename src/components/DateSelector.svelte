@@ -39,7 +39,7 @@
 		<!-- Bouton pour définir la date actuelle -->
 		<button
 			type="button"
-			class="text-sm text-blue-400 cursor-pointer hover:underline"
+			class="cursor-pointer text-sm text-blue-400 hover:underline"
 			onclick={() =>
 			{
 				// Réinitialisation de la date historique
@@ -56,7 +56,7 @@
 		min={id === "end-date-selector" ? minEndDate : undefined}
 		max={id === "start-date-selector" ? maxStartDate : undefined}
 		type="datetime-local"
-		class="p-2 border border-gray-600 rounded-md"
+		class="rounded-md border border-gray-600 p-2"
 		oninput={( event ) =>
 		{
 			// Réinitialisation de la date historique
@@ -68,7 +68,7 @@
 	/>
 
 	<!-- Séparateur avec le sélecteur d'événements historiques -->
-	<div class="flex items-center justify-center text-gray-400 text-sm">
+	<div class="flex items-center justify-center text-sm text-gray-400">
 		<hr class="flex-grow border-t-1 border-dotted border-gray-700" />
 		<span class="mx-2 whitespace-nowrap">Or</span>
 		<hr class="flex-grow border-t-1 border-dotted border-gray-700" />
@@ -76,7 +76,7 @@
 
 	<!-- Sélecteur pour les événements historiques -->
 	<select
-		class="p-2 bg-zinc-950 rounded-md border border-gray-600 text-gray-300"
+		class="rounded-md border border-gray-600 bg-zinc-950 p-2 text-gray-300"
 		onchange={( event ) => onChange( event.currentTarget.value )}
 		bind:value={selectedDate}
 	>
@@ -103,7 +103,7 @@
 		<a
 			rel="noopener noreferrer"
 			href={eventData?.link}
-			class="text-sm inline-block w-[fit-content] break-all text-gray-400 underline underline-offset-2 decoration-dotted hover:text-blue-400"
+			class="inline-block w-[fit-content] text-sm break-all text-gray-400 underline decoration-dotted underline-offset-2 hover:text-blue-400"
 			target="_blank"
 		>
 			{eventData?.link}</a
