@@ -1,10 +1,15 @@
 <script lang="ts">
 	// Importation des dépendances et composants.
+	import dayjs from "dayjs";
 	import type { EventProperties } from "../interfaces/EventProperties";
 
 	// Initialisation des variables.
+	const minEndDate = dayjs().format( "YYYY-MM-DDTHH:mm:ss" );
+	const maxStartDate = dayjs().endOf( "day" ).format( "YYYY-MM-DDTHH:mm:ss" );
+
 	let selectedDate = $state( "" );
 	let {
+		id = "",
 		label = $bindable( "" ),
 		date = $bindable( "" ),
 		isNow = $bindable( false ),
@@ -16,6 +21,7 @@
 		} ),
 		events = $bindable( {} )
 	}: {
+		id: string;
 		label: string;
 		date: string;
 		isNow: boolean;
@@ -47,6 +53,8 @@
 
 	<!-- Champ de saisie pour la date -->
 	<input
+		min={id === "end-date-selector" ? minEndDate : undefined}
+		max={id === "start-date-selector" ? maxStartDate : undefined}
 		type="datetime-local"
 		class="p-2 border border-gray-600 rounded-md"
 		oninput={( event ) =>
