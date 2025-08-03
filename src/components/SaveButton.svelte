@@ -39,7 +39,7 @@
 </script>
 
 <button
-	class="mt-8 mx-auto block px-4 py-2 cursor-pointer bg-blue-600 hover:bg-blue-700 rounded text-white text-sm"
+	class="mx-auto mt-8 block cursor-pointer rounded bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-700"
 	onclick={saveToURL}
 >
 	🔗 Save current countdown

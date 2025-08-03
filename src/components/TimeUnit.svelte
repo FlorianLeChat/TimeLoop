@@ -15,5 +15,5 @@
 <div class="flex flex-col items-center">
 	<NumberFlow trend={0} {value} format={{ minimumIntegerDigits: 2 }} />
 
-	<span class="text-sm mt-1">{label}</span>
+	<span class="mt-1 text-sm">{label}</span>
 </div>
