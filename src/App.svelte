@@ -115,6 +115,7 @@
 	<!-- Sélecteurs de date et paramètres d'affichage -->
 	<div class="flex flex-col gap-6">
 		<DateSelector
+			id="start-date-selector"
 			label="Start date:"
 			date={startDate}
 			isNow={startIsNow}
@@ -124,6 +125,7 @@
 		/>
 
 		<DateSelector
+			id="end-date-selector"
 			label="End date:"
 			date={endDate}
 			isNow={endIsNow}
