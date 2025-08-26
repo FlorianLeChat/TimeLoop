@@ -61,14 +61,14 @@ export const eventsByRegion: Record<string, EventProperties[]> = {
 			link: "https://en.wikipedia.org/wiki/Euro"
 		},
 		{
-			label: "Brexit referendum (2016-06-23)",
-			date: "2016-06-23T00:00",
-			link: "https://en.wikipedia.org/wiki/Brexit_referendum"
-		},
-		{
 			label: "Paris Agreement on climate change (2015-12-12)",
 			date: "2015-12-12T00:00",
 			link: "https://en.wikipedia.org/wiki/Paris_Agreement"
+		},
+		{
+			label: "Brexit referendum (2016-06-23)",
+			date: "2016-06-23T00:00",
+			link: "https://en.wikipedia.org/wiki/Brexit_referendum"
 		},
 		{
 			label: "Russian invasion of Ukraine (2022-02-24)",
