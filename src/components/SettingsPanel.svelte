@@ -1,5 +1,4 @@
 <script lang="ts">
-	// Initialisation des variables.
 	let {
 		showCenturies = $bindable( true ),
 		showYears = $bindable( true ),

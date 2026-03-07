@@ -1,8 +1,6 @@
 <script lang="ts">
-	// Importation des dépendances et composants.
 	import NumberFlow from "@number-flow/svelte";
 
-	// Initialisation des variables.
 	let {
 		label = $bindable( "" ),
 		value = $bindable( 0 )

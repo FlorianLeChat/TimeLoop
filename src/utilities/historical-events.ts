@@ -1,8 +1,5 @@
 import type { EventProperties } from "../interfaces/EventProperties";
 
-//
-// Liste des événements historiques organisés par région.
-//
 export const eventsByRegion: Record<string, EventProperties[]> = {
 	"Europe": [
 		{

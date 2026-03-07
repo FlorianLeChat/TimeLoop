@@ -1,9 +1,7 @@
 <script lang="ts">
-	// Importation des dépendances et composants.
 	import TimeUnit from "./TimeUnit.svelte";
 	import { NumberFlowGroup } from "@number-flow/svelte";
 
-	// Initialisation des variables.
 	let {
 		remaining = $bindable( null ),
 		startIsNow = $bindable( false ),
@@ -29,7 +27,6 @@
 
 {#if remaining}
 	<NumberFlowGroup>
-		<!-- Affichage du titre en fonction des dates -->
 		<p class="text-sm text-gray-400">
 			{#if startIsNow}
 				Remaining time from now:
@@ -40,7 +37,6 @@
 			{/if}
 		</p>
 
-		<!-- Affichage des unités de temps -->
 		<div class="flex flex-wrap justify-center gap-6 font-mono text-5xl">
 			{#if showCenturies}
 				<TimeUnit label="centuries" value={remaining.centuries} />

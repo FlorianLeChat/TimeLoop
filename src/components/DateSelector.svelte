@@ -1,9 +1,7 @@
 <script lang="ts">
-	// Importation des dépendances et composants.
 	import dayjs from "dayjs";
 	import type { EventProperties } from "../interfaces/EventProperties";
 
-	// Initialisation des variables.
 	const minEndDate = dayjs().format( "YYYY-MM-DDTHH:mm:ss" );
 	const maxStartDate = dayjs().endOf( "day" ).format( "YYYY-MM-DDTHH:mm:ss" );
 
@@ -16,7 +14,6 @@
 		onNow = $bindable( () => {} ),
 		onChange = $bindable( ( value: string ) =>
 		{
-			// Fonction par défaut pour gérer le changement de date.
 			console.log( "Date changed to:", value );
 		} ),
 		events = $bindable( {} )
@@ -33,17 +30,13 @@
 
 <div class="flex flex-col gap-2">
 	<div class="flex items-center justify-between">
-		<!-- Affichage du libellé pour la date -->
 		<span>{label}</span>
 
-		<!-- Bouton pour définir la date actuelle -->
 		<button
 			type="button"
 			class="cursor-pointer text-sm text-blue-400 hover:underline"
 			onclick={() =>
 			{
-				// Réinitialisation de la date historique
-				//  sélectionnée si on veut la date actuelle.
 				selectedDate = "";
 
 				onNow();
@@ -51,7 +44,6 @@
 		>
 	</div>
 
-	<!-- Champ de saisie pour la date -->
 	<input
 		min={id === "end-date-selector" ? minEndDate : undefined}
 		max={id === "start-date-selector" ? maxStartDate : undefined}
@@ -59,22 +51,18 @@
 		class="rounded-md border border-gray-600 p-2"
 		oninput={( event ) =>
 		{
-			// Réinitialisation de la date historique
-			//  sélectionnée si on saisit une nouvelle date.
 			selectedDate = "";
 			onChange( event.currentTarget.value );
 		}}
 		bind:value={date}
 	/>
 
-	<!-- Séparateur avec le sélecteur d'événements historiques -->
 	<div class="flex items-center justify-center text-sm text-gray-400">
 		<hr class="flex-grow border-t-1 border-dotted border-gray-700" />
 		<span class="mx-2 whitespace-nowrap">Or</span>
 		<hr class="flex-grow border-t-1 border-dotted border-gray-700" />
 	</div>
 
-	<!-- Sélecteur pour les événements historiques -->
 	<select
 		class="rounded-md border border-gray-600 bg-zinc-950 p-2 text-gray-300"
 		onchange={( event ) => onChange( event.currentTarget.value )}
@@ -91,7 +79,6 @@
 		{/each}
 	</select>
 
-	<!-- Affichage de la date sélectionnée -->
 	{#if selectedDate}
 		{@const regionData = Object.keys( events ).find( ( region ) =>
 			events[ region ].some( ( item ) => item.date === selectedDate )
