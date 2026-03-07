@@ -21,7 +21,7 @@
 	let showMinutes = $state( true );
 	let showSeconds = $state( true );
 
-	let timer: number;
+	let timer: NodeJS.Timeout;
 	let remaining = $state( {
 		centuries: 0,
 		years: 0,

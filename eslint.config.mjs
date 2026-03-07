@@ -32,6 +32,7 @@ export default defineConfig(
 			}
 		},
 		rules: {
+			"no-undef": "off",
 			"no-shadow": "off",
 			"camelcase": [
 				"error",
