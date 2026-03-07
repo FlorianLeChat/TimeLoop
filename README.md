@@ -79,10 +79,4 @@ This project was created with [Svelte](https://svelte.dev/) 🚀, is based on th
 - Remove development dependencies using `npm prune --omit=dev` ;
 - Use a web server to serve the static files generated in the previous step.
 
-> [!TIP]
-> To try the project, you *can* also use [Docker](https://www.docker.com/) installed. Once installed, simply start the development Docker image with `docker compose up --detach --build` command. The website should be available at http://localhost:5173/. If you want to work on the project with Docker, you need to use `docker compose watch --no-up` to automatically synchronize your local changes with the container. 🐳
-
-> [!CAUTION]
-> The Docker image **cannot** and **was not designed** to run in a production environment. This project generates static files that must be served with a pre-configured web server adhering to security and optimization best practices. ⚠️
-
 ![image](./.gitlab/images/timeloop.png)
