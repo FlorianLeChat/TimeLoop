@@ -1,8 +1,6 @@
 <script lang="ts">
-	// Importation des dépendances et composants.
 	import { SvelteURLSearchParams } from "svelte/reactivity";
 
-	// Initialisation des variables.
 	let {
 		startDate = $bindable( "" ),
 		endDate = $bindable( "" ),
@@ -15,8 +13,6 @@
 		endIsNow: boolean;
 	} = $props();
 
-	// Fonction de sauvegarde de l'URL dans la barre d'adresse
-	//  avec copie dans le presse-papiers
 	const saveToURL = async () =>
 	{
 		const parameters = new SvelteURLSearchParams( window.location.search );
@@ -24,7 +20,7 @@
 		parameters.set( "end", endIsNow ? "now" : endDate );
 
 		const url = `${ window.location.origin }${ window.location.pathname }?${ parameters.toString() }`;
-		history.replaceState( null, "", url ); // Remplacement de l'URL actuelle sans recharger la page.
+		history.replaceState( null, "", url );
 
 		try
 		{
