@@ -58,9 +58,9 @@
 	/>
 
 	<div class="flex items-center justify-center text-sm text-gray-400">
-		<hr class="flex-grow border-t-1 border-dotted border-gray-700" />
+		<hr class="grow border-t border-dotted border-gray-700" />
 		<span class="mx-2 whitespace-nowrap">Or</span>
-		<hr class="flex-grow border-t-1 border-dotted border-gray-700" />
+		<hr class="grow border-t border-dotted border-gray-700" />
 	</div>
 
 	<select
@@ -90,7 +90,7 @@
 		<a
 			rel="noopener noreferrer"
 			href={eventData?.link}
-			class="inline-block w-[fit-content] text-sm break-all text-gray-400 underline decoration-dotted underline-offset-2 hover:text-blue-400"
+			class="inline-block w-fit text-sm break-all text-gray-400 underline decoration-dotted underline-offset-2 hover:text-blue-400"
 			target="_blank"
 		>
 			{eventData?.link}</a
