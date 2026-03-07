@@ -1,15 +1,14 @@
 # ⏳ TimeLoop
 
-![HTML](https://img.shields.io/badge/HTML-E34F26?logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![HTML](./.gitlab/badges/html.svg)
+![CSS](./.gitlab/badges/css.svg)
+![TypeScript](./.gitlab/badges/typescript.svg)
 
-![Svelte](https://img.shields.io/badge/Svelte-FF3E00?logo=svelte&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
-![Prettier](https://img.shields.io/badge/Prettier-F7B93E?logo=prettier&logoColor=black)
-![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white)
+![Svelte](./.gitlab/badges/svelte.svg)
+![TailwindCSS](./.gitlab/badges/tailwindcss.svg)
+![Vite](./.gitlab/badges/vite.svg)
+![Prettier](./.gitlab/badges/prettier.svg)
+![ESLint](./.gitlab/badges/eslint.svg)
 
 ## In French
 
@@ -82,4 +81,4 @@ This project was created with [Svelte](https://svelte.dev/) 🚀, is based on th
 > [!CAUTION]
 > The Docker image **cannot** and **was not designed** to run in a production environment. This project generates static files that must be served with a pre-configured web server adhering to security and optimization best practices. ⚠️
 
-![image](https://github.com/user-attachments/assets/234f59c9-225e-4496-9e6a-5c27a78e5067)
+![image](./.gitlab/images/timeloop.png)
