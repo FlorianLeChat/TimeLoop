@@ -1,99 +1,101 @@
 <script lang="ts">
-	import dayjs from "dayjs";
-	import type { EventProperties } from "../interfaces/EventProperties";
+    import dayjs from "dayjs";
+    import type { EventProperties } from "../interfaces/EventProperties";
 
-	const minEndDate = dayjs().format( "YYYY-MM-DDTHH:mm:ss" );
-	const maxStartDate = dayjs().endOf( "day" ).format( "YYYY-MM-DDTHH:mm:ss" );
+    const minEndDate = dayjs().format( "YYYY-MM-DDTHH:mm:ss" );
+    const maxStartDate = dayjs().endOf( "day" ).format( "YYYY-MM-DDTHH:mm:ss" );
 
-	let selectedDate = $state( "" );
-	let {
-		id = "",
-		label = $bindable( "" ),
-		date = $bindable( "" ),
-		isNow = $bindable( false ),
-		onNow = $bindable( () => {} ),
-		onChange = $bindable( ( value: string ) =>
-		{
-			console.log( "Date changed to:", value );
-		} ),
-		events = $bindable( {} )
-	}: {
-		id: string;
-		label: string;
-		date: string;
-		isNow: boolean;
-		onNow: () => void;
-		onChange: ( value: string ) => void;
-		events: Record<string, EventProperties[]>;
-	} = $props();
+    let selectedDate = $state( "" );
+    let {
+        id = "",
+        label = $bindable( "" ),
+        date = $bindable( "" ),
+        isNow = $bindable( false ),
+        onNow = $bindable( () =>
+        { /* empty */ } ),
+        onChange = $bindable( ( value: string ) =>
+        {
+            console.log( "Date changed to:", value );
+        } ),
+        events = $bindable( {} )
+    }: {
+        id: string;
+        label: string;
+        date: string;
+        isNow: boolean;
+        onNow: () => void;
+        onChange: ( value: string ) => void;
+        events: Record<string, EventProperties[]>;
+    } = $props();
 </script>
 
 <div class="flex flex-col gap-2">
-	<div class="flex items-center justify-between">
-		<span>{label}</span>
+    <div class="flex items-center justify-between">
+        <span>{label}</span>
 
-		<button
-			type="button"
-			class="cursor-pointer text-sm text-blue-400 hover:underline"
-			onclick={() =>
-			{
-				selectedDate = "";
+        <button
+            type="button"
+            class="cursor-pointer text-sm text-blue-400 hover:underline"
+            onclick={() =>
+            {
+                selectedDate = "";
 
-				onNow();
-			}}>Now</button
-		>
-	</div>
+                onNow();
+            }}>Now
+        </button
+        >
+    </div>
 
-	<input
-		min={id === "end-date-selector" ? minEndDate : undefined}
-		max={id === "start-date-selector" ? maxStartDate : undefined}
-		type="datetime-local"
-		class="rounded-md border border-gray-600 p-2"
-		oninput={( event ) =>
-		{
-			selectedDate = "";
-			onChange( event.currentTarget.value );
-		}}
-		bind:value={date}
-	/>
+    <input
+        min={id === "end-date-selector" ? minEndDate : undefined}
+        max={id === "start-date-selector" ? maxStartDate : undefined}
+        type="datetime-local"
+        class="rounded-md border border-gray-600 p-2"
+        oninput={( event ) =>
+        {
+            selectedDate = "";
+            onChange( event.currentTarget.value );
+        }}
+        bind:value={date}
+    />
 
-	<div class="flex items-center justify-center text-sm text-gray-400">
-		<hr class="grow border-t border-dotted border-gray-700" />
-		<span class="mx-2 whitespace-nowrap">Or</span>
-		<hr class="grow border-t border-dotted border-gray-700" />
-	</div>
+    <div class="flex items-center justify-center text-sm text-gray-400">
+        <hr class="grow border-t border-dotted border-gray-700" />
+        <span class="mx-2 whitespace-nowrap">Or</span>
+        <hr class="grow border-t border-dotted border-gray-700" />
+    </div>
 
-	<select
-		class="rounded-md border border-gray-600 bg-zinc-950 p-2 text-gray-300"
-		onchange={( event ) => onChange( event.currentTarget.value )}
-		bind:value={selectedDate}
-	>
-		<option value="" selected disabled>Select a historical event</option>
+    <select
+        class="rounded-md border border-gray-600 bg-zinc-950 p-2 text-gray-300"
+        onchange={( event ) => onChange( event.currentTarget.value )}
+        bind:value={selectedDate}
+    >
+        <option value="" selected disabled>Select a historical event</option>
 
-		{#each Object.entries( events ) as [ region, items ] ( region )}
-			<optgroup label={region}>
-				{#each items as item ( item.date )}
-					<option value={item.date}>{item.label}</option>
-				{/each}
-			</optgroup>
-		{/each}
-	</select>
+        {#each Object.entries( events ) as [ region, items ] ( region )}
+            <optgroup label={region}>
+                {#each items as item ( item.date )}
+                    <option value={item.date}>{item.label}</option>
+                {/each}
+            </optgroup>
+        {/each}
+    </select>
 
-	{#if selectedDate}
-		{@const regionData = Object.keys( events ).find( ( region ) =>
-			events[ region ].some( ( item ) => item.date === selectedDate )
-		)}
-		{@const eventData = events[ regionData ?? "" ]?.find(
-			( item ) => item.date === selectedDate
-		)}
+    {#if selectedDate}
+        {@const regionData = Object.keys( events ).find( ( region ) =>
+            events[ region ].some( ( item ) => item.date === selectedDate )
+        )}
+        {@const eventData = events[ regionData ?? "" ]?.find(
+            ( item ) => item.date === selectedDate
+        )}
 
-		<a
-			rel="noopener noreferrer"
-			href={eventData?.link}
-			class="inline-block w-fit text-sm break-all text-gray-400 underline decoration-dotted underline-offset-2 hover:text-blue-400"
-			target="_blank"
-		>
-			{eventData?.link}</a
-		>
-	{/if}
+        <a
+            rel="noopener noreferrer"
+            href={eventData?.link}
+            class="inline-block w-fit text-sm break-all text-gray-400 underline decoration-dotted underline-offset-2 hover:text-blue-400"
+            target="_blank"
+        >
+            {eventData?.link}</a
+        >
+    {/if}
 </div>

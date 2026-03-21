@@ -1,17 +1,17 @@
 <script lang="ts">
-	import NumberFlow from "@number-flow/svelte";
+    import NumberFlow from "@number-flow/svelte";
 
-	let {
-		label = $bindable( "" ),
-		value = $bindable( 0 )
-	}: {
-		label: string;
-		value: number;
-	} = $props();
+    let {
+        label = $bindable( "" ),
+        value = $bindable( 0 )
+    }: {
+        label: string;
+        value: number;
+    } = $props();
 </script>
 
 <div class="flex flex-col items-center">
-	<NumberFlow trend={0} {value} format={{ minimumIntegerDigits: 2 }} />
+    <NumberFlow trend={0} {value} format={{ minimumIntegerDigits: 2 }} />
 
-	<span class="mt-1 text-sm">{label}</span>
+    <span class="mt-1 text-sm">{label}</span>
 </div>

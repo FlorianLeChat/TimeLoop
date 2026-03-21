@@ -1,5 +1,5 @@
 export interface EventProperties {
-	label: string;
-	date: string;
-	link: string;
+    label: string;
+    date: string;
+    link: string;
 }
