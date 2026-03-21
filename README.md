@@ -23,9 +23,6 @@ Ce projet, sous la forme d'un petit site Internet, a été réalisé quelques te
 
 Ce projet a été réalisé avec [Svelte](https://svelte.dev/) 🚀, s'appuie sur la bibliothèque [NumberFlow](https://number-flow.barvian.me/svelte), et ne propose pas de fonctionnalités avancées pour éviter d'utiliser un quelconque serveur back-end. Il s'agit donc d'un site totalement statique qui peut être hébergé sur n'importe quel serveur Web.
 
-> [!NOTE]
-> Tout ou partie du code peut contenir des commentaires dans ma langue natale (le français) afin de faciliter le développement. 🌐
-
 ### Installation
 
 > [!WARNING]
@@ -56,9 +53,6 @@ Ce projet a été réalisé avec [Svelte](https://svelte.dev/) 🚀, s'appuie su
 This project, a small website, was created shortly after the death of a family member. That's when you really realize how valuable time is. That is why I decided to start this project: a countdown that makes it easy to estimate the time remaining or elapsed since a historical event or a custom date defined by the user, to never forget how time flies.
 
 This project was created with [Svelte](https://svelte.dev/) 🚀, is based on the [NumberFlow](https://number-flow.barvian.me/svelte) library, and does not offer any advanced features to avoid using any back-end server. This is a completely static site that can be hosted on any web server.
-
-> [!NOTE]
-> All or part of the code may contain comments in my native language (French) to ease development. 🌐
 
 ### Setup
 
