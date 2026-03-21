@@ -17,7 +17,7 @@
 		"husky": "~9.1",
 		"dayjs": "~1.11",
 		"eslint": "~9.39",
-		"svelte": "~5.45",
+		"svelte": "~5.54",
 		"globals": "~16.5",
 		"prettier": "~3.7",
 		"typescript": "~5.9",
