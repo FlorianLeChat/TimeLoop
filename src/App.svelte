@@ -90,9 +90,8 @@
         rel="noopener noreferrer"
         href="https://github.com/FlorianLeChat/TimeLoop"
         class="group fixed top-0 right-0 bottom-auto left-auto [clip-path:polygon(0_0,100%_0,100%_100%)] max-sm:hidden"
-        title="GitHub"
         target="_blank"
-        aria-label="GitHub"
+        aria-label="GitHub repository link"
     >
         <svg width="80" height="80" viewBox="0 0 250 250">
             <path d="M0 0l115 115h15l12 27 108 108V0z" class="fill-white" />
