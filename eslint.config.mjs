@@ -14,7 +14,7 @@ export default defineConfig(
     tslint.configs.strict,
     tslint.configs.stylistic,
     stylistic.configs.recommended,
-    sveltelint.configs[ "flat/recommended" ],
+    sveltelint.configs.recommended,
     {
         plugins: {
             "@stylistic": stylistic
@@ -26,8 +26,8 @@ export default defineConfig(
             },
             parserOptions: {
                 parser: tslint.parser,
-                project: [ "./tsconfig.json" ],
                 svelteConfig,
+                projectService: true,
                 extraFileExtensions: [ ".svelte" ]
             }
         },
@@ -99,9 +99,7 @@ export default defineConfig(
                     }
                 }
             ],
-            "@stylistic/computed-property-spacing": [ "error", "always" ],
-
-            "svelte/no-at-html-tags": "off"
+            "@stylistic/computed-property-spacing": [ "error", "always" ]
         }
     }
 );
