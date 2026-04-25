@@ -121,7 +121,6 @@
             id="start-date-selector"
             label="Start date:"
             date={startDate}
-            isNow={startIsNow}
             onNow={setStartNow}
             onChange={onChangeStart}
             events={eventsByRegion}
@@ -131,7 +130,6 @@
             id="end-date-selector"
             label="End date:"
             date={endDate}
-            isNow={endIsNow}
             onNow={setEndNow}
             onChange={onChangeEnd}
             events={eventsByRegion}

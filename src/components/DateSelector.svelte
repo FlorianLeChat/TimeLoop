@@ -10,9 +10,7 @@
         id = "",
         label = $bindable( "" ),
         date = $bindable( "" ),
-        isNow = $bindable( false ),
-        onNow = $bindable( () =>
-        { /* empty */ } ),
+        onNow = $bindable( () => { /* empty */ } ),
         onChange = $bindable( ( value: string ) =>
         {
             console.log( "Date changed to:", value );
@@ -22,7 +20,6 @@
         id: string;
         label: string;
         date: string;
-        isNow: boolean;
         onNow: () => void;
         onChange: ( value: string ) => void;
         events: Record<string, EventProperties[]>;
