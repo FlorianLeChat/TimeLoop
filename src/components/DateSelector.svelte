@@ -32,15 +32,14 @@
 
         <button
             type="button"
-            class="cursor-pointer text-sm text-blue-400 hover:underline"
+            class="text-sm text-blue-400 hover:underline"
             onclick={() =>
             {
                 selectedDate = "";
 
                 onNow();
             }}>Now
-        </button
-        >
+        </button>
     </div>
 
     <input
@@ -92,7 +91,7 @@
             class="inline-block w-fit text-sm break-all text-gray-400 underline decoration-dotted underline-offset-2 hover:text-blue-400"
             target="_blank"
         >
-            {eventData?.link}</a
-        >
+            {eventData?.link}
+        </a>
     {/if}
 </div>
