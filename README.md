@@ -19,7 +19,7 @@
 
 ### Introduction
 
-Ce projet, sous la forme d'un petit site Internet, a été réalisé quelques temps après la disparition d'un proche. C'est dans ces moments-là que l'on prend pleinement conscience de la valeur particulière du temps. C'est pourquoi j'ai décidé de me lancer dans la création de ce projet : un compte à rebours permettant d'estimer facilement et simplement les temps restants ou écoulés depuis un événement historique ou une date personnalisée définie par l'utilisateur, afin de **ne jamais oublier à quel point le temps passe**.
+Ce projet, sous la forme d'un petit site Internet, a été réalisé quelque temps après la disparition d'un proche. C'est dans ces moments-là que l'on prend pleinement conscience de la valeur particulière du temps. C'est pourquoi j'ai décidé de me lancer dans la création de ce projet : un compte à rebours permettant d'estimer facilement et simplement les temps restants ou écoulés depuis un événement historique ou une date personnalisée définie par l'utilisateur, afin de **ne jamais oublier à quel point le temps passe**.
 
 Ce projet a été réalisé avec [Svelte](https://svelte.dev/) 🚀, s'appuie sur la bibliothèque [NumberFlow](https://number-flow.barvian.me/svelte), et ne propose pas de fonctionnalités avancées pour éviter d'utiliser un quelconque serveur back-end. Il s'agit donc d'un site totalement statique qui peut être hébergé sur n'importe quel serveur Web.
 
@@ -30,13 +30,13 @@ Ce projet a été réalisé avec [Svelte](https://svelte.dev/) 🚀, s'appuie su
 
 #### Développement local
 
-- Installer [Node.js LTS](https://nodejs.org/) (>20 ou plus) ;
+- Installer [Node.js LTS](https://nodejs.org/) (>22 ou plus) ;
 - Installer les dépendances du projet avec la commande `npm install` ;
 - Démarrer le serveur local Vite avec la commande `npm run dev`.
 
 #### Déploiement en production
 
-- Installer [Node.js LTS](https://nodejs.org/) (>20 ou plus) ;
+- Installer [Node.js LTS](https://nodejs.org/) (>22 ou plus) ;
 - Installer les dépendances du projet avec la commande `npm install` ;
 - Compiler les fichiers statiques du site Internet avec la commande `npm run build` ;
 - Utiliser un serveur Web pour servir les fichiers statiques générés à l'étape précédente.
@@ -61,13 +61,13 @@ This project was created with [Svelte](https://svelte.dev/) 🚀, is based on th
 
 #### Local development
 
-- Install [Node.js LTS](https://nodejs.org/) (>20 or higher) ;
+- Install [Node.js LTS](https://nodejs.org/) (>22 or higher) ;
 - Install project dependencies using `npm install` ;
 - Start Vite local server using `npm run dev`.
 
 #### Production deployment
 
-- Install [Node.js LTS](https://nodejs.org/) (>20 or higher) ;
+- Install [Node.js LTS](https://nodejs.org/) (>22 or higher) ;
 - Install project dependencies using `npm install` ;
 - Build static website files using `npm run build` ;
 - Remove development dependencies using `npm prune --omit=dev` ;
