@@ -2,12 +2,12 @@
     import dayjs from "dayjs";
     import { onMount, onDestroy } from "svelte";
 
-    import TimeDisplay from "./components/TimeDisplay.svelte";
-    import DateSelector from "./components/DateSelector.svelte";
-    import SettingsPanel from "./components/SettingsPanel.svelte";
-    import SaveLinkButton from "./components/SaveButton.svelte";
-    import { eventsByRegion } from "./utilities/historical-events";
-    import { calculateRemaining } from "./utilities/time-calculation";
+    import TimeDisplay from "./(components)/TimeDisplay.svelte";
+    import DateSelector from "./(components)/DateSelector.svelte";
+    import SettingsPanel from "./(components)/SettingsPanel.svelte";
+    import SaveLinkButton from "./(components)/SaveButton.svelte";
+    import { eventsByRegion } from "$lib/utilities/historical-events";
+    import { calculateRemaining } from "$lib/utilities/time-calculation";
 
     let startDate = $state( "" );
     let endDate = $state( "" );

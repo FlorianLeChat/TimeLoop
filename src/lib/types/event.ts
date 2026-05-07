@@ -1,4 +1,4 @@
-export interface EventProperties {
+export interface Event {
     label: string;
     date: string;
     link: string;

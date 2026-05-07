@@ -1,6 +1,6 @@
-import type { EventProperties } from "../interfaces/EventProperties";
+import type { Event } from "../interfaces/event";
 
-export const eventsByRegion: Record<string, EventProperties[]> = {
+export const eventsByRegion: Record<string, Event[]> = {
     "Europe": [
         {
             label: "Fall of Roman Empire (476)",

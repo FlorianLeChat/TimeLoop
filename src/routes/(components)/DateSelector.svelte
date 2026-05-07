@@ -1,6 +1,6 @@
 <script lang="ts">
     import dayjs from "dayjs";
-    import type { EventProperties } from "../interfaces/EventProperties";
+    import type { Event } from "$lib/types/event";
 
     const minEndDate = dayjs().format( "YYYY-MM-DDTHH:mm:ss" );
     const maxStartDate = dayjs().endOf( "day" ).format( "YYYY-MM-DDTHH:mm:ss" );
@@ -22,7 +22,7 @@
         date: string;
         onNow: () => void;
         onChange: ( value: string ) => void;
-        events: Record<string, EventProperties[]>;
+        events: Record<string, Event[]>;
     } = $props();
 </script>
 
@@ -86,7 +86,7 @@
         )}
 
         <a
-            rel="noopener noreferrer"
+            rel="noopener noreferrer external"
             href={eventData?.link}
             class="inline-block w-fit text-sm break-all text-gray-400 underline decoration-dotted underline-offset-2 hover:text-blue-400"
             target="_blank"
