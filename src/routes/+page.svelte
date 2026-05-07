@@ -1,5 +1,6 @@
 <script lang="ts">
     import dayjs from "dayjs";
+    import { env } from "$env/dynamic/public";
     import { onMount, onDestroy } from "svelte";
 
     import TimeDisplay from "./(components)/TimeDisplay.svelte";
@@ -85,7 +86,11 @@
     } );
 </script>
 
-<main class="mx-auto max-w-xl space-y-6 p-8 text-white scheme-dark">
+<header class="text-white mt-1 ml-1 text-left text-xs">
+    <code>{env.PUBLIC_VERSION ?? "0.0.1"}</code>
+</header>
+
+<main class="mx-auto max-w-xl space-y-6 p-8 text-white">
     <a
         rel="noopener noreferrer"
         href="https://github.com/FlorianLeChat/TimeLoop"
