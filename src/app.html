@@ -7,14 +7,12 @@
         <meta name="theme-color" content="#0b0809" />
         <meta name="text-scale" content="scale" />
         <meta name="description" content="⏳ A countdown website for future or past dates, ensuring you never forget how time flies." />
-        <meta name="keywords" content="npm,time,typescript,eslint,countdown,timer,a11y,prettier,svelte,husky,tailwindcss,dayjs,vite" />
+        <meta name="keywords" content="npm,time,typescript,eslint,countdown,timer,a11y,prettier,svelte,husky,tailwindcss,dayjs,vite,sveltekit" />
 
         <title>TimeLoop - A Countdown Website</title>
 
         <link rel="author" href="https://github.com/FlorianLeChat" />
         <meta name="author" content="Florian Trayon" />
-
-        <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
 
         <meta property="og:title" content="TimeLoop - A Countdown Website" />
         <meta property="og:description" content="⏳ A countdown website for future or past dates, ensuring you never forget how time flies." />
@@ -28,15 +26,12 @@
         <meta name="twitter:description" content="⏳ A countdown website for future or past dates, ensuring you never forget how time flies." />
         <meta name="twitter:image" content="https://raw.githubusercontent.com/FlorianLeChat/TimeLoop/refs/heads/master/.gitlab/images/timeloop.png" />
 
-        <link rel="icon" href="/assets/favicons/16x16.webp" type="image/webp" sizes="16x16" />
-        <link rel="icon" href="/assets/favicons/32x32.webp" type="image/webp" sizes="32x32" />
-        <link rel="icon" href="/assets/favicons/48x48.webp" type="image/webp" sizes="48x48" />
-        <link rel="icon" href="/assets/favicons/192x192.webp" type="image/webp" sizes="192x192" />
-        <link rel="icon" href="/assets/favicons/512x512.webp" type="image/webp" sizes="512x512" />
-        <link rel="apple-touch-icon" href="/assets/favicons/180x180.webp" type="image/webp" sizes="180x180" />
+        %sveltekit.head%
     </head>
 
-    <body class="min-h-screen bg-zinc-950">
-        <script type="module" src="src/main.ts"></script>
+    <body data-sveltekit-preload-data="hover" class="min-h-screen bg-zinc-950">
+        <div style="display: contents">
+            %sveltekit.body%
+        </div>
     </body>
 </html>
