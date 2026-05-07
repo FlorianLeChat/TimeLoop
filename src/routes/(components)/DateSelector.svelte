@@ -86,7 +86,7 @@
         )}
 
         <a
-            rel="noopener noreferrer"
+            rel="noopener noreferrer external"
             href={eventData?.link}
             class="inline-block w-fit text-sm break-all text-gray-400 underline decoration-dotted underline-offset-2 hover:text-blue-400"
             target="_blank"
