@@ -1,4 +1,4 @@
-import type { Event } from "../interfaces/event";
+import type { Event } from "../types/event";
 
 export const eventsByRegion: Record<string, Event[]> = {
     "Europe": [

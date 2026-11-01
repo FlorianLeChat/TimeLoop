@@ -1,14 +1,14 @@
 <script lang="ts">
     import dayjs from "dayjs";
-    import { env } from "$env/dynamic/public";
+    import { PUBLIC_VERSION } from "$app/env/public";
     import { onMount, onDestroy } from "svelte";
 
     import TimeDisplay from "./(components)/TimeDisplay.svelte";
     import DateSelector from "./(components)/DateSelector.svelte";
     import SettingsPanel from "./(components)/SettingsPanel.svelte";
     import SaveLinkButton from "./(components)/SaveButton.svelte";
-    import { eventsByRegion } from "$lib/utilities/historical-events";
-    import { calculateRemaining } from "$lib/utilities/time-calculation";
+    import { eventsByRegion } from "#lib/utilities/historical-events.ts";
+    import { calculateRemaining } from "#lib/utilities/time-calculation.ts";
 
     let startDate = $state( "" );
     let endDate = $state( "" );
@@ -87,7 +87,7 @@
 </script>
 
 <header class="text-white mt-1 ml-1 text-left text-xs">
-    <code>{env.PUBLIC_VERSION ?? "0.0.1"}</code>
+    <code>{PUBLIC_VERSION}</code>
 </header>
 
 <main class="mx-auto max-w-xl space-y-6 p-8 text-white">

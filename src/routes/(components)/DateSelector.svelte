@@ -1,6 +1,6 @@
 <script lang="ts">
     import dayjs from "dayjs";
-    import type { Event } from "$lib/types/event";
+    import type { Event } from "#lib/types/event.ts";
 
     const minEndDate = dayjs().format( "YYYY-MM-DDTHH:mm:ss" );
     const maxStartDate = dayjs().endOf( "day" ).format( "YYYY-MM-DDTHH:mm:ss" );
